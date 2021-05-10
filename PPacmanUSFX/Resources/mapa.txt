@@ -1,15 +1,20 @@
-xxxxxxxxxxxxxxxxxxxx
-xo..c.........i...ox
-x.xxx.xxx..xxx.xxx.x
-x..................x
-x.xxx.x.xxxx.x.xxx.x
-x.....x......x.....x
-xxxxx.xxx..xxx.xxxxx
-xxxxx..........xxxxx
-......xxxxxxxx......
-xxxxx.x  b   x.xxxxx
-xxxxx.xxxxxxxx.xxxxx
-x..a...............x
-x.xxxxxxxxxxxxxxxx.x
-xo.......p........ox
-xxxxxxxxxxxxxxxxxxxx
+
+
+         q
+
+
+vyyyyyyyyyyyyyyyyyyn
+zo..c.........i...oz           
+z.hyj.hyj..hyj.hyj.z
+z..................z            1           2
+z.hyj.x.hyyj.x.hyj.z
+z.....z......z.....z
+myyyn.myj..hyñ.vyyyñ
+yyyyñ..........myyyy
+......vyyyyyyn......            3           4
+yyyyn.z  b g z.vyyyy
+vyyyñ.myyyyyyñ.myyyn
+z..a...............z
+z.hyyyyyyyyyyyyyyj.z
+zo.......p........oz
+myyyyyyyyyyyyyyyyyyñ

@@ -29,6 +29,7 @@
     <ClCompile Include="Pacman.cpp" />
     <ClCompile Include="Pared.cpp" />
     <ClCompile Include="Pila.cpp" />
+    <ClCompile Include="Recursos.cpp" />
     <ClCompile Include="Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +42,7 @@
     <ClInclude Include="Pacman.h" />
     <ClInclude Include="Pared.h" />
     <ClInclude Include="Pila.h" />
+    <ClInclude Include="Recursos.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>

@@ -23,6 +23,40 @@ MapGenerator::MapGenerator(int _anchoPantalla, int _altoPantalla)
 	superMonedaTexture->loadFromImage(pathSuperMoneda);
 	paredTexture = new Texture();
 	paredTexture->loadFromImage(pathPared);
+
+	paredHTexture = new Texture();
+	paredHTexture->loadFromImage(pathParedH);
+
+	paredCTexture = new Texture();
+	paredCTexture->loadFromImage(pathParedC);
+
+	paredC2Texture = new Texture();
+	paredC2Texture->loadFromImage(pathParedC2);
+
+	paredC3Texture = new Texture();
+	paredC3Texture->loadFromImage(pathParedC3);
+
+	paredC4Texture = new Texture();
+	paredC4Texture->loadFromImage(pathParedC4);
+
+	paredC5Texture = new Texture();
+	paredC5Texture->loadFromImage(pathParedC5);
+
+	paredC6Texture = new Texture();
+	paredC6Texture->loadFromImage(pathParedC6);
+
+	recursosTexture = new Texture();
+	recursosTexture->loadFromImage(pathRecursos);
+
+	recursos1Texture = new Texture();
+	recursos1Texture->loadFromImage(pathRecursos1);
+	recursos2Texture = new Texture();
+	recursos2Texture->loadFromImage(pathRecursos2);
+	recursos3Texture = new Texture();
+	recursos3Texture->loadFromImage(pathRecursos3);
+	recursos4Texture = new Texture();
+	recursos4Texture->loadFromImage(pathRecursos4);
+
 }
 
 bool MapGenerator::load(string path)
@@ -53,9 +87,33 @@ bool MapGenerator::load(string path)
 			// Se verifica que letra es la que se lee y en funcion a ello se crea un tipo de objeto
 			switch (chars[x])
 			{
-			case 'x':
+				//recursos laberinto
+			case 'z':
 				newObject = new Pared(paredTexture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
 				break;
+			case 'y':
+				newObject = new Pared(paredHTexture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
+				break;
+			case 'v':
+				newObject = new Pared(paredCTexture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
+				break;
+			case 'n':
+				newObject = new Pared(paredC2Texture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
+				break;
+			case 'm':
+				newObject = new Pared(paredC3Texture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
+				break;
+			case 'ñ':
+				newObject = new Pared(paredC4Texture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
+				break;
+			case 'h':
+				newObject = new Pared(paredC5Texture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
+				break;
+			case 'j':
+				newObject = new Pared(paredC6Texture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
+				break;
+
+
 			case '.':
 				newObject = new Moneda(monedaTexture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla);
 				newObject->setParametrosAnimacion(4);
@@ -65,7 +123,7 @@ bool MapGenerator::load(string path)
 				newObject->setParametrosAnimacion(6);
 				break;
 			case 'p':
-				newObject = new Pacman(pacmanTexture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla, 5);
+				newObject = new Pacman(pacmanTexture, x *25 , y *25, 250, 250, anchoPantalla, altoPantalla, 5);
 				newObject->setParametrosAnimacion(2);
 				break;
 			case 'b':
@@ -82,6 +140,33 @@ bool MapGenerator::load(string path)
 				break;
 			case 'a':
 				newObject = new Fantasma(fantasma4Texture, x * 25, y * 25, 25, 25, anchoPantalla, altoPantalla, 3);
+				newObject->setParametrosAnimacion(8);
+				break;
+			case 'q':
+				newObject = new Recursos(recursosTexture, x*15  , y, 300, 168, anchoPantalla, altoPantalla);
+				//newObject->setParametrosAnimacion(6);
+				break;
+				//imagenes de apoyo
+			case '1':
+				//newObject = new Recursos(recursos1Texture, x *25, y *25, 781, 721, anchoPantalla, altoPantalla);
+				//newObject->setParametrosAnimacion(1);
+				break;
+			case '2':
+				newObject = new Recursos(recursos2Texture, x *25 , y *25, 192, 192, anchoPantalla, altoPantalla);
+				newObject->setParametrosAnimacion(6);
+				break;
+			case '3':
+				newObject = new Recursos(recursos3Texture, x *17 , y *15, 78, 78, anchoPantalla, altoPantalla);
+				//newObject->setParametrosAnimacion(6);
+				break;
+			case '4':
+				newObject = new Recursos(recursos4Texture, x*15 , y*15, 104, 105, anchoPantalla, altoPantalla);
+				//newObject->setParametrosAnimacion(6);
+				break;
+
+
+			case 'g':
+				newObject = new Fruta(frutaTexture, x , y, 25, 25, anchoPantalla, altoPantalla);
 				newObject->setParametrosAnimacion(4);
 				break;
 			}
